@@ -1,0 +1,71 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 3rem;
+}
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1rem;
+}
+img{
+    width: 100%;
+}
+#header{
+    background-color: rgb(10, 195, 195);
+    padding: 30px;
+    text-align: center;
+}
+#row{
+    /* use flexbox to layout a row or column  */
+    display: flex;
+    /* use row for desktop and tablet layout  */
+    flex-direction: row;
+    /* wrap is used with tablet layout to create am extra row  */
+    flex-wrap: wrap;
+}
+.column{
+    /* flex: 1 sets flex-grow to 1, flex-shrink to 1 and flex-basis to 1 
+    flex-basis of 1 means child columns will have equal width */
+    flex: 1;
+    /* because box-sizing = border box. padding is counted as part of the overall width of the column */
+    padding: 10px;
+}
+#col1{
+    background-color: rgb(244, 238, 177);
+}
+#col2{
+    background-color:rgb(241, 117, 142);
+}
+#col3{
+    background-color: rgb(216, 118, 255);
+}
+#col4{
+    background-color: rgb(183, 119, 243);
+}
+#footer{
+    background-color: rgb(108, 171, 244);
+    padding: 10px;
+    text-align: center;
+}
+@media screen and (max-width:900px) {
+    .column{
+        min-width: 50%;
+    }
+}
+@media screen and (max-width: 500px){
+    .column{
+        min-width: 100%;
+    }
+    .row{
+        flex-direction: column;
+    }
+    h1{
+        font-size: 4rem;
+    }
+    p{
+        font-size: 1.4rem;
+    }
+}
